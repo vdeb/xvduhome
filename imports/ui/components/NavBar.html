@@ -1,0 +1,39 @@
+<template name='NavBar'>
+	<header id="navbar1" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+		<a class="navbar-brand" href="/">
+			<img class="" height='50' width='50' src="/logo_home.png">
+		</a>
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto nav-pills nav"> 
+		              <!--<li class="hidden nav-item">
+		                <a class="nav-link" href="#page-top"></a>
+		            </li> -->
+		            <li class="nav-item">
+		            	<a class="nav-link" href="/actualites">Actualités</a>
+		            </li>
+		            <li class="nav-item">
+		            	<a class="nav-link" href="/saison">Saison</a>
+		            </li>
+		            <li class="nav-item">
+		            	<a class="nav-link" href="/events">Prochains évènements</a>
+		            </li>
+		            <li class='nav-item dropdown'>
+		            	<a class="nav-link nav-item dropdown-toggle" data-toggle="dropdown" href="#">L'équipe</a>
+		            	<div class='dropdown-menu'>
+		            		<a class="dropdown-item" href="">L'histoire</a>
+		            		<a class="dropdown-item" href="">Le maillot</a>
+		            		<a class="dropdown-item" href="">Les photos</a>
+		            	</div>
+		            </li>
+		        </ul>
+		        <div class="navbar-nav flex-row" style='color: white'>
+		        	{{> loginButtons align="right"}}
+		        </div>
+		    </div>
+		</header>
+	</template>

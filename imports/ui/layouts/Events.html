@@ -1,3 +1,14 @@
 <template name='Events'>
 	<h1>Prochains Evènements</h1>
+	{{> quickForm collection=getEvents id="insertEventForm" type="insert" class="new-event-form" buttonContent="Enregistrer"}}
+
+	<section>
+		{{#if Template.subscriptionsReady}}
+			{{#each events}}
+				{{> Event}}
+			{{/each}}
+		{{else}}
+			<p>Loading</p>
+		{{/if}}
+	</section>
 </template>

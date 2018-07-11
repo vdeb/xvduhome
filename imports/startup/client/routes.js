@@ -13,8 +13,8 @@ FlowRouter.route('/',{
 	}
 });
 
-FlowRouter.route('/events',{
-	name : 'events',
+FlowRouter.route('/evenements',{
+	name : 'evenements',
 	action(){
 		BlazeLayout.render('MainLayout',{main: 'Events'});
 	}

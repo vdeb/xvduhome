@@ -28,12 +28,12 @@ zimme:active-route
 accounts-ui
 accounts-password
 
-fortawesome:fontawesome
+#fortawesome:fontawesome
 spiderable
 fastclick
 raix:handlebar-helpers
 aldeed:collection2
 aldeed:autoform
 
-matb33:bootstrap-glyphicons
+#matb33:bootstrap-glyphicons
 meteortoys:allthings

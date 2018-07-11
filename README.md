@@ -1,3 +1,3 @@
 XV DU HOME
 ==============
-Le nouveau site du Xv du Home
+Le nouveau site du XV du Home

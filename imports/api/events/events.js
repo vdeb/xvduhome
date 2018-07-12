@@ -14,7 +14,10 @@ EventSchema = new SimpleSchema({
 	},
 	desc : {
 		type : String,
-		label : "Description"
+		label : "Description",
+		autoform : {
+			type : 'textarea'
+		}
 	},
 	place : {
 		type : String,
@@ -49,6 +52,10 @@ EventSchema = new SimpleSchema({
 		autoform : {
 			value : '00:00'
 		}
+	},
+	isMatch : {
+		type : Boolean,
+		label : "Match"
 	},
 	createdAt : {
 		type : Date,

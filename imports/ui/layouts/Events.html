@@ -1,7 +1,9 @@
 <template name='Events'>
 	<h1>Prochains Evènements</h1>
-	{{> quickForm collection=getEvents id="insertEventForm" type="insert" class="new-event-form" buttonContent="Enregistrer"}}
-
+	<div class="jumbotron">
+		<h4>Ajouter un nouvel évènement</h4>
+		{{> quickForm collection=getEvents id="insertEventForm" type="insert" class="form-group" buttonContent="Enregistrer"}}
+	</div>
 	<section>
 		{{#if Template.subscriptionsReady}}
 			{{#each events}}

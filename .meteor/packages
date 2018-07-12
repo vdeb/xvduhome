@@ -28,7 +28,7 @@ zimme:active-route
 accounts-ui
 accounts-password
 
-#fortawesome:fontawesome
+fortawesome:fontawesome
 spiderable
 fastclick
 raix:handlebar-helpers
@@ -37,3 +37,4 @@ aldeed:autoform
 
 #matb33:bootstrap-glyphicons
 meteortoys:allthings
+momentjs:moment

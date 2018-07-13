@@ -1,9 +1,13 @@
 <template name='Events'>
 	<h1>Prochains Evènements</h1>
-	<div class="jumbotron">
-		<h4>Ajouter un nouvel évènement</h4>
-		{{> quickForm collection=getEvents id="insertEventForm" type="insert" class="form-group" buttonContent="Enregistrer"}}
-	</div>
+	{{#if $.Session.get 'newEvent'}}
+		{{> NewEvent}}
+	{{else}}
+		<button class="btn new-event">Ajouter un évènement</button>
+	{{/if}}
+	
+	<section><a href="/evenements_passes">Evenements passés</a></section>
+	
 	<section>
 		{{#if Template.subscriptionsReady}}
 			{{#each events}}

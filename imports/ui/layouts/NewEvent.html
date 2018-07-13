@@ -1,0 +1,7 @@
+<template name="NewEvent">
+	<div class="jumbotron position-relative py-3">
+		<h4>Nouvel évènement</h4>
+		<i class="fa fa-close position-absolute p-3 close-button" style='top:0;right:0'></i>
+		{{> quickForm collection=getEvents id="insertEventForm" type="insert" class="form-group" buttonContent="Enregistrer"}}
+	</div>
+</template>

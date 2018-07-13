@@ -1,0 +1,15 @@
+<template name='PastEvents'>
+	<h1>Evènements passés</h1>
+
+	<section><a href="/evenements">Evenements à venir</a></section>
+	
+	<section>
+		{{#if Template.subscriptionsReady}}
+			{{#each events}}
+				{{> Event}}
+			{{/each}}
+		{{else}}
+			<p>Loading</p>
+		{{/if}}
+	</section>
+</template>

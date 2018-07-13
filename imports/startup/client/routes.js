@@ -4,6 +4,7 @@ import { Meteor } from 'meteor/meteor';
 
 import '../../ui/layouts/MainLayout.js';
 import '../../ui/layouts/Events.js';
+import '../../ui/layouts/PastEvents.js';
 
 FlowRouter.route('/',{
 	name : 'home',
@@ -17,5 +18,12 @@ FlowRouter.route('/evenements',{
 	name : 'evenements',
 	action(){
 		BlazeLayout.render('MainLayout',{main: 'Events'});
+	}
+});
+
+FlowRouter.route('/evenements_passes',{
+	name : 'evenementsPasses',
+	action(){
+		BlazeLayout.render('MainLayout',{main: 'PastEvents'});
 	}
 });

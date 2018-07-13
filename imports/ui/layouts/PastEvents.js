@@ -4,27 +4,23 @@ import { Meteor } from 'meteor/meteor';
 import { Events } from '../../api/events/events.js';
 
 import './Event.js';
-import './NewEvent.js';
 
-import './Events.html';
+import './PastEvents.html';
 
 
-Template.Events.onCreated(function EventstOnCreated() {
+Template.PastEvents.onCreated(function EventstOnCreated() {
 	var self = this;
 	self.autorun(function() {
-		self.subscribe('Events');
+		self.subscribe('PastEvents');
 	});
 	
 });
 
-Template.Events.helpers({
+Template.PastEvents.helpers({
 	events: ()=> {
 		return Events.find({});
-	}
-});﻿
-
-Template.Events.events({
-	'click .new-event' : () => {
-		Session.set('newEvent', true);
 	},
-});
+	getEvents() {
+            return Events;
+        },
+});﻿

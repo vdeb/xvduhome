@@ -1,12 +1,13 @@
 import { Template } from 'meteor/templating';
 import { Meteor } from 'meteor/meteor';
 
-import { Events } from '../../api/events/events.js';
 
+
+import './Events.html';
 import './Event.js';
 import './NewEvent.js';
 
-import './Events.html';
+import { Events } from '../../api/events/events.js';
 
 
 Template.Events.onCreated(function EventstOnCreated() {
@@ -14,7 +15,6 @@ Template.Events.onCreated(function EventstOnCreated() {
 	self.autorun(function() {
 		self.subscribe('Events');
 	});
-	
 });
 
 Template.Events.helpers({

@@ -57,6 +57,17 @@ EventSchema = new SimpleSchema({
 		type : Boolean,
 		label : "Match"
 	},
+	participants :{
+		type : Array,
+		optional : true,
+		label : "participants",
+		autoform : {
+			type : 'hidden'
+		}
+	},
+	'participants.$' : {
+		type : String
+	},
 	createdAt : {
 		type : Date,
 		label : "Créé le",

@@ -3,10 +3,25 @@ import { check } from 'meteor/check';
 
 import { Events } from '../events.js';
 
-Meteor.publish('Events', function () {
-	return Events.find({Date : {$gte : new Date()}},{sort :{Date:1}});
-});
+//Meteor.publish('Events', function () {
+//	return Events.find({Date : {$gte : new Date()}},{sort :{Date:1}});
+//});
 
 Meteor.publish('PastEvents', function () {
 	return Events.find({Date : {$lt : new Date()}},{sort :{Date:-1}});
+});
+
+Meteor.publishComposite('Events', {
+	find() {
+		return Events.find({Date : {$gte : new Date()}},{sort :{Date:1}});
+	},
+	children : [{
+		find(event) {
+			//Find all participants and non participants relative to an event
+			return Meteor.users.find({
+				$or:[{_id : {$in : event.participants}}, {_id: {$in : event.nonParticipants}}]
+			},
+			{ fields: { username: 1 } })
+		}
+	}]
 });

@@ -1,17 +1,51 @@
 <template name="Event">
-	<div class="card mb-3">
+	<div class="card mb-3 shadow-sm">
 		<div class="card-body">
 			<h2 class="card-title">{{name}}</h2>
 			<div class="row">
 				<div class="col">
-				<p class="card-subtitle mb-1 text-muted"><i class="fa fa-calendar"></i> {{formatDate Date}} <span>{{beginTime}} - {{endTime}}</span></p>
-				<p class="card-subtitle mb-2 text-muted"><i class="fa fa-map-marker"></i>  {{place}}</p>
+					<p class="card-subtitle mb-1 text-muted">
+						<i class="fa fa-calendar"></i> {{formatDate Date}} <span>{{beginTime}} - {{endTime}}</span>
+					</p>
+					<p class="card-subtitle mb-2 text-muted">
+						<i class="fa fa-map-marker"></i>  {{place}}
+					</p>
 				</div>
 				<div class="col align-self-end text-md-right">
 					<a href="" class="card-link">Détails</a>
 				</div>
 			</div>
 			<p>{{{convertHtml desc}}}</p>
+			{{#unless repondu}}
+				<div class="alert alert-danger">Je n'ai pas encore répondu !!</div>
+				<button class="btn participation">J'y participe</button>
+				<button class="btn non-participation">Je n'y participe pas</button>
+			{{else}}
+				{{#if participation}}
+					<div class="alert alert-success">Je participe !</div>
+					<button class="btn non-participation" style="display:inline;">En fait non...</button>
+				{{else}}
+					<div class="alert alert-warning">Je ne participe pas...</div>
+					<button class="btn participation">En fait si !</button>
+				{{/if}}
+			{{/unless}}
+			<p>Participants : </p>
+			<ul>
+				{{#each listeParticipants}}
+					{{> Participant}}
+				{{/each}}
+			</ul>
+			<p>Absents : </p>
+			<ul>
+				{{#each listeNonParticipants}}
+					{{> Participant}}
+				{{/each}}
+			</ul>
+			
 		</div>
 	</div>
+</template>
+
+<template name="Participant">
+	<li>{{username}}</li>
 </template>

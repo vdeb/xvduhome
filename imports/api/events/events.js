@@ -68,6 +68,17 @@ EventSchema = new SimpleSchema({
 	'participants.$' : {
 		type : String
 	},
+	nonParticipants :{
+		type : Array,
+		optional : true,
+		label : "non participants",
+		autoform : {
+			type : 'hidden'
+		}
+	},
+	'nonParticipants.$' : {
+		type : String
+	},
 	createdAt : {
 		type : Date,
 		label : "Créé le",

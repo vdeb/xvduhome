@@ -16,5 +16,25 @@ Events.allow({
 Meteor.methods({
 	deleteEvent : function(id) {
 		Events.remove(id);
-	}
+	},
+	addParticipant : function(id,userId) {
+		Events.update(id, {
+			$push : {
+				participants: userId
+			},
+			$pull : {
+				nonParticipants: userId
+			}
+		})
+	},
+	removeParticipant : function(id,userId) {
+		Events.update(id, {
+			$pull : {
+				participants: userId
+			},
+			$push : {
+				nonParticipants : userId
+			}
+		});
+	},
 });

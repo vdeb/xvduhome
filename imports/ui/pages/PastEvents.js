@@ -3,7 +3,7 @@ import { Meteor } from 'meteor/meteor';
 
 import { Events } from '../../api/events/events.js';
 
-import './Event.js';
+import '../components/events/PastEvent.js';
 
 import './PastEvents.html';
 

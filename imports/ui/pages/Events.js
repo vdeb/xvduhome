@@ -1,11 +1,9 @@
 import { Template } from 'meteor/templating';
 import { Meteor } from 'meteor/meteor';
 
-
-
 import './Events.html';
-import './Event.js';
-import './NewEvent.js';
+import '../components/events/Event.js';
+import '../components/events/NewEvent.js';
 
 import { Events } from '../../api/events/events.js';
 

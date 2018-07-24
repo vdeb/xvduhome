@@ -1,0 +1,96 @@
+<template name="Event">
+	<div class="card mb-3 shadow-sm">
+		<div class="card-body position-relative">
+			<i class="fa fa-pencil position-absolute p-1" style='top:0;right:20px'> </i>
+			<i class="fa fa-trash position-absolute p-1" style='top:0;right:0'> </i>
+			
+			{{#if editMode}}
+				
+				{{> quickForm collection=getEvents id=updateEventId type="update" doc=this autosave=true class="form-group" buttonContent="Enregistrer"}}
+					<p>Participants : </p>
+					<ul>
+						{{#each listeParticipants}}
+						{{> Participant}}
+						{{/each}}
+					</ul>
+					<p>Absents : </p>
+					<ul>
+						{{#each listeNonParticipants}}
+						{{> Participant}}
+						{{/each}}
+					</ul>
+				
+			{{else}}
+				
+					<div class="d-flex">
+						<div class="align-self-start displayDate mr-2 border border-secondary bg-light">
+							<span class="displayDate-day"><span>{{formatDateDay Date}}</span></span>
+							<span class="displayDate-month"><span>{{formatDateMonth Date}}</span></span>
+						</div>
+					
+					<div class="align-top flex-grow-1">
+						<h2 class="card-title">
+							{{name}}
+						</h2>
+					
+				
+					
+						<div class="row">
+							<div class="col-md-10">
+								<p class="card-subtitle mb-1 text-muted">
+									<i class="fa fa-clock-o mr-2"></i>{{beginTime}} - {{endTime}}
+								</p>
+								<p class="card-subtitle mb-2 text-muted">
+									<i class="fa fa-map-marker mr-2"></i>{{place}}
+								</p>
+							</div>
+							<div class="col-md-2 align-self-end text-md-right">
+								<a href="" class="card-link">Détails</a>
+							</div>
+						</div>
+
+						<p>{{{convertHtml desc}}}</p>
+						
+						{{#if currentUser}}
+							{{#unless repondu}}
+								<div class="alert alert-danger">Je n'ai pas encore répondu !!</div>
+								<button class="btn participation">J'y participe</button>
+								<button class="btn non-participation">Je n'y participe pas</button>
+							{{else}}
+								{{#if participation}}
+									<div class="alert alert-success">Je participe !</div>
+									<button class="btn non-participation" style="display:inline;">En fait non...</button>
+								{{else}}
+									<div class="alert alert-warning">Je ne participe pas...</div>
+									<button class="btn participation">En fait si !</button>
+								{{/if}}
+							{{/unless}}
+						{{/if}}
+					
+
+					
+					<p>Participants : </p>
+					<ul>
+						{{#each listeParticipants}}
+						{{> Participant}}
+						{{/each}}
+					</ul>
+					<p>Absents : </p>
+					<ul>
+						{{#each listeNonParticipants}}
+						{{> Participant}}
+						{{/each}}
+					</ul>
+				</div>
+			</div>
+
+
+			{{/if}}
+
+			</div>		
+					
+		
+	</div>
+
+
+</template>

@@ -3,8 +3,9 @@ import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 import { Meteor } from 'meteor/meteor';
 
 import '../../ui/layouts/MainLayout.js';
-import '../../ui/layouts/Events.js';
-import '../../ui/layouts/PastEvents.js';
+import '../../ui/pages/Events.js';
+import '../../ui/pages/PastEvents.js';
+import '../../ui/pages/Posts.js';
 
 FlowRouter.route('/',{
 	name : 'home',
@@ -25,5 +26,12 @@ FlowRouter.route('/evenements_passes',{
 	name : 'evenementsPasses',
 	action(){
 		BlazeLayout.render('MainLayout',{main: 'PastEvents'});
+	}
+});
+
+FlowRouter.route('/actualites',{
+	name : 'actualites',
+	action(){
+		BlazeLayout.render('MainLayout',{main: 'Posts'});
 	}
 });

@@ -1,1 +1,22 @@
 @import '{}/node_modules/bootstrap/scss/bootstrap';
+
+
+.displayDate {
+	text-align:center;
+	padding: 8px;
+	border-radius : 8px;
+}
+
+.displayDate-day {
+	display:block;
+	fontsize: 20px;
+	line-height: 1.1;
+    font-weight: 500;
+    color: #f13a59;
+}
+
+.displayDate-month {
+	display:block;
+	fontsize: 12px;
+	text-transform: uppercase;
+}

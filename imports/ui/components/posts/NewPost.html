@@ -1,0 +1,11 @@
+<template name='NewPost'>
+	<div class="jumbotron position-relative py-3">
+		<p>Nouvel article</p>
+		<button type="button" class="close position-absolute p-3" aria-label="Close" style='top:0;right:0'>
+			<span aria-hidden="true">&times;</span>
+		</button>
+
+		{{> quickForm collection=getPosts id="insertEventForm" type="insert" class="form-group" buttonContent="Enregistrer"}}
+		
+	</div>
+</template>

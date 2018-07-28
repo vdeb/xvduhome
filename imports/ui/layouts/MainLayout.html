@@ -1,8 +1,18 @@
 <template name='MainLayout'>
-	<div class="container" style="margin-top: 80px">
+	<div class="container-fluid" style="margin-top: 80px">
 		{{> NavBar}}
-		<main role="main" class="container">
-			{{> Template.dynamic template=main}}
-		</main>
+		<div class="row flex-xl-nowrap">
+			<div class="col-12 col-md-3 col-xl-2 bd-sidebar pt-md-5">
+				{{#if currentUser}}
+					{{> UserSpace}}
+				{{/if}}
+
+				{{> EventsFeed}}
+			</div>
+
+			<main role="main" class="col-12 col-md-9 col-xl-10 py-md-3 pr-5 pl-2 bd-content">
+				{{> Template.dynamic template=main}}
+			</main>
+		</div>
 	</div>
 </template>

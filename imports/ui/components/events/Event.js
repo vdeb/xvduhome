@@ -25,7 +25,7 @@ Template.registerHelper('formatDateDay', function(date) {
 Template.registerHelper('formatDateMonth', function(date) {
 	var date = moment(date);
 	date.locale('fr');
-	console.log(date.locale());
+	//console.log(date.locale());
 	return date.format('MMM');
 });
 

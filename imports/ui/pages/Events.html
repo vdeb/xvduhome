@@ -1,11 +1,14 @@
 <template name='Events'>
-	<h1>Prochains Evènements</h1>
-	{{#if $.Session.get 'newEvent'}}
-		{{> NewEvent}}
-	{{else}}
-		<button class="btn new-event">Ajouter un évènement</button>
-	{{/if}}
-	
+	<div class="clearfix">
+		
+		{{#if $.Session.get 'newEvent'}}
+			<h1 class='bd-title'>Prochains Evènements</h1>
+			{{> NewEvent}}
+		{{else}}
+			<h1 class='bd-title float-left'>Prochains Evènements</h1>
+			<button class="btn new-event float-right">Ajouter un évènement</button>
+		{{/if}}
+	</div>
 	<section><a href="/evenements_passes">Evenements passés</a></section>
 	
 	<section>

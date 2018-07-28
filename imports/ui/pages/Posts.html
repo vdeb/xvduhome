@@ -1,9 +1,13 @@
 <template name='Posts'>
-	{{#if $.Session.get 'newPost'}}
-		{{> NewPost}}
-	{{else}}
-		<button class="btn new-post">Ajouter un article ou un résumé</button>
-	{{/if}}
+	<div class="clearfix">
+		{{#if $.Session.get 'newPost'}}
+		<h1 class='bd-title'>Actualité</h1>
+			{{> NewPost}}
+		{{else}}
+			<h1 class='bd-title float-left'>Actualité</h1>
+			<button class="btn new-post float-right">Ajouter un article ou un résumé</button>
+		{{/if}}
+	</div>
 
 	{{#if Template.subscriptionsReady}}
 		<div class="blog-main">

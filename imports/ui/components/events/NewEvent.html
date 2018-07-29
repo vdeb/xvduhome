@@ -4,6 +4,8 @@
 		<button type="button" class="close position-absolute p-3" aria-label="Close" style='top:0;right:0'>
 			<span aria-hidden="true">&times;</span>
 		</button>
-		{{> quickForm collection=getEvents id="insertEventForm" type="insert" class="form-group" buttonContent="Enregistrer"}}
+		{{#if Template.subscriptionsReady}}
+			{{> quickForm collection=getEvents id="insertEventForm" type="insert" class="form-group" buttonContent="Enregistrer"}}
+		{{/if}}
 	</div>
 </template>

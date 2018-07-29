@@ -27,9 +27,11 @@ reywood:publish-composite
 kadira:flow-router
 kadira:blaze-layout
 zimme:active-route
+arillo:flow-router-helpers
 
 accounts-ui
 accounts-password
+alanning:roles
 
 fortawesome:fontawesome
 spiderable
@@ -45,4 +47,8 @@ fourseven:scss
 
 erasaur:meteor-lodash
 
+# Images
 ostrio:files
+ostrio:autoform-files
+
+dburles:mongo-collection-instances

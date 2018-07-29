@@ -3,9 +3,20 @@ import { Mongo } from 'meteor/mongo';
 import { check } from 'meteor/check';
 import SimpleSchema from 'simpl-schema';
 
+import { Images } from '../images/images.js';
+
 export const Events = new Mongo.Collection('Events');
 
 SimpleSchema.extendOptions(['autoform']);
+
+SimpleSchema.setDefaultMessages({
+  initialLanguage: 'fr',
+  messages: {
+    fr: {
+      uploadError: '{{value}}', //File-upload
+    },
+  }
+});
 
 EventSchema = new SimpleSchema({
 	name : {
@@ -87,6 +98,18 @@ EventSchema = new SimpleSchema({
 		},
 		autoform : {
 			type : 'hidden'
+		}
+	},
+	picture: {
+		type: String,
+		label : 'Photo de profil',
+		autoform: {
+			afFieldInput: {
+				type: 'fileUpload',
+				collection: 'Images',
+				//uploadTemplate: 'uploadField', // <- Optional
+        		//previewTemplate: 'myFilePreview', // <- Optional
+			}
 		}
 	}
 });

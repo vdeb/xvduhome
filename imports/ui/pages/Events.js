@@ -12,6 +12,7 @@ Template.Events.onCreated(function EventstOnCreated() {
 	var self = this;
 	self.autorun(function() {
 		self.subscribe('Events');
+		self.subscribe('files.images.all');
 	});
 });
 

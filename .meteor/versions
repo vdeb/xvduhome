@@ -6,6 +6,7 @@ alanning:roles@1.2.16
 aldeed:autoform@6.3.0
 aldeed:collection2@3.0.0
 allow-deny@1.1.0
+arillo:flow-router-helpers@0.5.2
 autoupdate@1.4.1
 babel-compiler@7.1.1
 babel-runtime@1.2.2

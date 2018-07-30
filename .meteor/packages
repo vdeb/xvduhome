@@ -52,3 +52,5 @@ ostrio:files
 ostrio:autoform-files
 
 dburles:mongo-collection-instances
+
+session

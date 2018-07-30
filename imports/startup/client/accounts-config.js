@@ -1,6 +1,6 @@
-import { Accounts } from 'meteor/accounts-base';
+//import { Accounts } from 'meteor/accounts-base';
 import { Roles } from 'meteor/alanning:roles';
  
-Accounts.ui.config({
-  passwordSignupFields: 'USERNAME_ONLY',
-});
+//Accounts.ui.config({
+//  passwordSignupFields: 'USERNAME_ONLY',
+//});

@@ -9,6 +9,9 @@ import '../../ui/pages/PastEvents.js';
 import '../../ui/pages/Posts.js';
 import '../../ui/pages/AccountPage.js';
 
+// Import to override accounts templates
+import '../../ui/accounts/accounts-templates.js';
+
 FlowRouter.route('/',{
 	name : 'home',
 	action(){

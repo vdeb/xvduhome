@@ -31,9 +31,17 @@
 		            	</div>
 		            </li>
 		        </ul>
-		        <div class="navbar-nav flex-row" style='color: white'>
-		        	<i class="fa fa-user-o mr-1"></i>
-		        	{{> loginButtons align="right"}}
+		        <div class="navbar-nav flex-row">
+		        	<!--<i class="fa fa-user-o mr-1"></i> -->
+		        	<div class="btn-group" role='group'>
+		        		{{#if currentUser}}
+		        			<a class="btn btn-light js-logout">Se déconnecter</a>
+		        		{{else}}
+			        		<a class="btn btn-light" href="{{pathFor 'signin'}}">Se connecter</a>
+			        		<a class="btn btn-light" href="{{pathFor 'join'}}">S'inscrire</a>
+						{{/if}}
+		        	</div>
+		        	<!--{{> loginButtons align="right"}} -->
 		        </div>
 		    </div>
 		</header>

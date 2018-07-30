@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Mongo } from 'meteor/mongo';
 import { check } from 'meteor/check';
 import SimpleSchema from 'simpl-schema';
+import { Tracker } from 'meteor/tracker';
 
 import { Images } from '../images/images.js';
 
@@ -18,7 +19,7 @@ SimpleSchema.setDefaultMessages({
   }
 });
 
-EventSchema = new SimpleSchema({
+export const EventSchema = new SimpleSchema({
 	name : {
 		type : String,
 		label : "Nom"
@@ -103,6 +104,7 @@ EventSchema = new SimpleSchema({
 	picture: {
 		type: String,
 		label : 'Photo de profil',
+		optional : true,
 		autoform: {
 			afFieldInput: {
 				type: 'fileUpload',
@@ -112,6 +114,6 @@ EventSchema = new SimpleSchema({
 			}
 		}
 	}
-});
+}, { tracker: Tracker });
 
 Events.attachSchema(EventSchema);

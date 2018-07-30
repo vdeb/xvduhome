@@ -1,5 +1,6 @@
 import { Template } from 'meteor/templating';
 import { Meteor } from 'meteor/meteor';
+import { Session } from 'meteor/session';
 
 import './Events.html';
 import '../components/events/Event.js';

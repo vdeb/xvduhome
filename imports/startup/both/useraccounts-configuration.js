@@ -1,4 +1,9 @@
 import { AccountsTemplates } from 'meteor/useraccounts:core';
+t9n = require('meteor-accounts-t9n');
+T9n = t9n.T9n;
+
+T9n.map('fr'), require('meteor-accounts-t9n/build/fr');
+T9n.setLanguage("fr");
 
 /**
  * The useraccounts package must be configured for both client and server to work properly.
@@ -53,8 +58,8 @@ pwd
     button: {
           changePwd: "Password Text",
           enrollAccount: "Enroll Text",
-          forgotPwd: "Forgot Pwd Text",
-          resetPwd: "Reset Pwd Text",
+          forgotPwd: "Recevoir un nouveau mot de passe",
+          resetPwd: "Réinitialiser mon mot de passe",
           signIn: "Se connecter",
           signUp: "S'inscrire",
         },

@@ -12,3 +12,9 @@ Posts.allow({
 		return !!userId;
 	}
 });
+
+Meteor.methods({
+	deletePost : function(id) {
+		Posts.remove(id);
+	},
+});

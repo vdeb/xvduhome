@@ -29,9 +29,13 @@ kadira:blaze-layout
 zimme:active-route
 arillo:flow-router-helpers
 
-accounts-ui
+# accounts-ui
 accounts-password
 alanning:roles
+useraccounts:core
+useraccounts:bootstrap
+useraccounts:flow-routing
+aldeed:template-extension
 
 fortawesome:fontawesome
 spiderable

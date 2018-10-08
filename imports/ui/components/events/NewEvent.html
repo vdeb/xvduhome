@@ -5,7 +5,7 @@
 			<span aria-hidden="true">&times;</span>
 		</button>
 		{{#if Template.subscriptionsReady}}
-			{{> quickForm collection=getEvents id="insertEventForm" type="insert" class="form-group" buttonContent="Enregistrer"}}
+			{{> quickForm collection=getEvents id="insertEventForm" schema=EventSchema type="insert" class="form-group" buttonContent="Enregistrer"}}
 		{{/if}}
 	</div>
 </template>

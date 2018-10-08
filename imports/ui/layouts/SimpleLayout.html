@@ -2,8 +2,10 @@
 	<div class="container" style="margin-top: 80px">
 		{{> NavBar}}
 
-			<main role="main" class="bd-content">
-				{{> Template.dynamic template=main}}
+			<main role="main" class="container px-md-5">
+				{{#if Template.subscriptionsReady}}
+					{{> Template.dynamic template=main}}
+				{{/if}}
 			</main>
 		
 	</div>

@@ -1,3 +1,3 @@
 
-import '../components/NavBar.html';
+import '../components/NavBar.js';
 import './SimpleLayout.html';

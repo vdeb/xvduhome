@@ -1,7 +1,15 @@
 <template name='Post'>
-	<div class="blog-post border-bottom mb-3">
-		<h2 class="blog-post-title">{{title}}</h2>
-		<p class="blog-post-meta font-italic">{{formatDate createdAt}} par {{getAuthor.username}}</p>
-		<p>{{{convertHtml content}}}</p>
+	<div class="blog-post border-bottom mb-3 position-relative">
+		<i class="fa fa-pencil position-absolute p-1" style='top:0;right:20px'> </i>
+		<i class="fa fa-trash position-absolute p-1" style='top:0;right:0'> </i>
+
+		{{#if editMode}}
+			{{> quickForm collection=getPosts id="updatePostForm" type="update" doc=this class="form-group" buttonContent="Enregistrer"}}
+		{{else}}
+			<h2 class="blog-post-title">{{title}}</h2>
+			<p class="blog-post-meta font-italic">{{formatDate createdAt}} par {{getAuthor.username}}</p>
+			<img src="{{getPicture}}" width="100">
+			<p>{{{convertHtml content}}}</p>
+		{{/if}}
 	</div>
 </template>

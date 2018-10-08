@@ -14,5 +14,8 @@ Template.NewPost.helpers({
 Template.NewPost.events({
 	'click .close' : () => {
 		Session.set('newPost', false);
+	},
+	'submit' : () => {
+		Session.set('newPost', false);
 	}
 })

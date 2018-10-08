@@ -35,7 +35,43 @@ T9n.setLanguage("fr");
   required: true,
   displayName: "Login",
 },
-pwd
+pwd,
+{
+  _id: 'position',
+  type: 'select',
+  displayName:'Poste',
+  required : true,
+  select: [
+        {
+        text: "Pilier",
+        value: "pilier",
+      }, {
+        text: "Talonneur",
+        value: "talonneur",
+      }, {
+        text: "Deuxième ligne",
+        value: "deuxiemeLigne",
+      }, {
+        text: "Troisième ligne",
+        value: "troisiemeLigne",
+      },{
+        text: "Demi de Mélée",
+        value: "demiMelee",
+      },{
+        text: "Demi d'ouverture'",
+        value: "demiOuverture",
+      },{
+        text: "Centre",
+        value: "centre",
+      },{
+        text: "Ailier",
+        value: "ailier",
+      },{
+        text: "Arrière",
+        value: "arriere",
+      },
+    ],
+}
 ]);
 
 

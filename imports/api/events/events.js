@@ -100,19 +100,6 @@ export const EventSchema = new SimpleSchema({
 		autoform : {
 			type : 'hidden'
 		}
-	},
-	picture: {
-		type: String,
-		label : 'Photo de profil',
-		optional : true,
-		autoform: {
-			afFieldInput: {
-				type: 'fileUpload',
-				collection: 'Images',
-				//uploadTemplate: 'uploadField', // <- Optional
-        		//previewTemplate: 'myFilePreview', // <- Optional
-			}
-		}
 	}
 }, { tracker: Tracker });
 

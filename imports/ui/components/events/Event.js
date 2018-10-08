@@ -1,5 +1,4 @@
 import { _ } from 'meteor/underscore';
-import { ReactiveVar } from 'meteor/reactive-var';
 import { ReactiveDict } from 'meteor/reactive-dict';
 
 
@@ -59,8 +58,8 @@ Template.Event.helpers({
         return this._id;
     },
     getEvents() {
-            return Events;
-        },
+    	return Events;
+    },
 });
 
 Template.Event.events({

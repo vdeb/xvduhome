@@ -34,14 +34,14 @@
 		        <div class="navbar-nav flex-row justify-content-center">
 		        	<!--<i class="fa fa-user-o mr-1"></i> -->
 		        	<div class="btn-group" role='group'>
-		        		{{#if currentUser}}
+		        		{{> atNavButton}}
+		        		<!--{{#if currentUser}}
 		        			<a class="btn btn-light js-logout">Se déconnecter</a>
 		        		{{else}}
 			        		<a class="btn btn-light" href="{{pathFor 'signin'}}">Se connecter</a>
 			        		<a class="btn btn-light" href="{{pathFor 'join'}}">S'inscrire</a>
-						{{/if}}
+						{{/if}}-->
 		        	</div>
-		        	<!--{{> loginButtons align="right"}} -->
 		        </div>
 		    </div>
 		</header>

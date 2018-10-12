@@ -34,6 +34,7 @@ T9n.setLanguage("fr");
   type: 'text',
   required: true,
   displayName: "Login",
+  placeholder:"Login ou E-mail",
 },
 pwd,
 {

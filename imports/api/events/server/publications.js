@@ -29,7 +29,7 @@ Meteor.publishComposite('PastEvents', {
 			return Meteor.users.find({
 				$or:[{_id : {$in : event.participants}}, {_id: {$in : event.nonParticipants}}]
 			},
-			{ fields: { username: 1 } })
+			{ fields: { username: 1, profile : 1 } })
 		}
 	}]
 });
